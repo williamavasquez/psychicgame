@@ -1,78 +1,34 @@
 <!DOCTYPE html>
-
 <html>
+
 <head>
 	<title>Pyshic Game</title>
-</head>
-<h1>The Psychic Game</h1>
-	<div>
-		<p>Wins: </p> <p id="win">0</p> 
-	</div>
-	<div>
-			<p>Losses: </p> <p id="losses">0</p> 
-	</div>
-	<div>
-			<p>Guess Left:</p> <p id="left">0</p> 
-	</div>	<div>
-			<p>Your guesses:</p> <p id="guess">0</p> 
-	</div>
 
+	<!-- 	reset css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+	<!-- style css for the page -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
 
 <body>
-	<script type="text/javascript">
 
-		var alphabet=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-		var wins = 0;
-		var losses = 0;
-		var left = 10;
-		var guess = [];
+		<h1>The Psychic Game</h1>
+		<div>
+			<p>Wins: </p> <p id="win">0</p> 
+		</div>
+		<div>
+				<p>Losses: </p> <p id="losses">0</p> 
+		</div>
+		<div>
+				<p>Guess Left:</p> <p id="left">0</p> 
+		</div>	<div>
+				<p>Your guesses:</p> <p id="guess">0</p> 
+		</div>
 
-// Computer picks a letter
-		var computerguess = alphabet[Math.floor(Math.random() * alphabet.length)];
+	<!-- 	game script (Can you guess what the computer guessed?) -->
+	<script src="assets/javascript/game.js"></script>
 
-// player trys there luck, and chooses different letters
-		document.onkeyup = function(event) {
-			var userGuess = String.fromCharCode(event.keyCode);
-		
-			// make sure the player chooses a letter
-			if(alphabet.indexOf(userGuess) >= 0){
-				// check to see if the user guessed correctly 
-				if (computerguess==userGuess) {
-					wins++;
-					alert("you won!!");
-					guess=[];
-					left=10;
-					computerguess = alphabet[Math.floor(Math.random() * alphabet.length)];
-
-				}
-
-				else if (left==0) {
-					losses++;
-					guess = [];
-					console.log("game over");
-					left=10;
-					computerguess = alphabet[Math.floor(Math.random() * alphabet.length)];
-				};
-
-				// add the user's guess to the guess array
-					guess.push(userGuess);
-
-			 // you only have 10 chances to hit the right letter			
-				left= (left-1);
-
-				// showing the results on the page
-					document.querySelector('#losses').innerHTML = losses;
-					document.querySelector('#win').innerHTML = wins;
-					document.querySelector('#guess').innerHTML = guess;
-					document.querySelector('#left').innerHTML = left;
-			}
-
-			else {
-	    alert('please choose a letter');
-	  	}
-
-	}
-
-	</script>
 </body>
 </html>
