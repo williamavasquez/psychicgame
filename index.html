@@ -1,43 +1,44 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
+	<meta charset="utc-8">
 <head>
 	<title>Pyshic Game</title>
 
 	<!-- 	reset css -->
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
-<!-- 	bootstrap css -->
-<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	<!-- 	bootstrap css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
 	<!-- style css for the page -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
 </head>
 
 <body>
-<div class="container">
-		<h1>The Psychic Game</h1>
-<!-- 		Shows the progress of game  -->
-		<h2>Guesses Remaining:</h2>
+	<div class="container">
+			<h1>The Psychic Game</h1>
+		<!--Shows the progress of game  -->
+			<h2>Guesses Remaining:</h2>
 
-		<h3 id="left">0</h3>
-		<div class="progress progress-striped">
-  		<div class="progress-bar progress-bar-info" id="report" >
-  		</div>
-		</div>
-<!-- 		end of progress bar -->
-		<h3> Losses: <p id="losses">0</p></h3>
-		
-		<div>
-			<h3>Wins: <p id="win">0</p> </h3> 
-		</div>
+			<h3 id="left">0</h3>
+			<div class="progress progress-striped">
+	  		<div class="progress-bar progress-bar-info" id="report" >
+	  		</div>
+			</div>
+		<!--end of progress bar -->
+			<h3> Losses: <p id="losses">0</p></h3>
+			
+			<div>
+				<h3>Wins: <p id="win">0</p> </h3> 
+			</div>
 
-		<div>
-				<h3>Your guesses: <p id="guess">0</p> </h3> 
-		</div>
-</div>
+			<div>
+					<h3>Your guesses: <p id="guess">0</p> </h3> 
+			</div>
+	</div>
 
 	<!-- 	game script (Can you guess what the computer guessed?) -->
 	<script src="assets/javascript/game.js"></script>
+	<!-- end of game script -->
 </body>
 </html>
