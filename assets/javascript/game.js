@@ -17,16 +17,16 @@
 			// check to see if the user guessed correctly 
 				if (computerguess==userGuess) {
 					wins++;
-					alert("you won!!");
+					alert("you won!! The letter was: " + computerguess);
 					guess=[];
 					left=10;
 					computerguess = alphabet[Math.floor(Math.random() * alphabet.length)];
 				}
 
 				else if (left==0) {
+					alert("you lost, the letter was: "+computerguess);
 					losses++;
 					guess = [];
-					console.log("game over");
 					left=10;
 					computerguess = alphabet[Math.floor(Math.random() * alphabet.length)];
 				};
