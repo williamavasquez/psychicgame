@@ -12,9 +12,9 @@
 		document.onkeyup = function(event) {
 			var userGuess = String.fromCharCode(event.keyCode);
 		
-			// make sure the player chooses a letter
+		// make sure the player chooses a letter
 			if(alphabet.indexOf(userGuess) >= 0){
-				// check to see if the user guessed correctly 
+			// check to see if the user guessed correctly 
 				if (computerguess==userGuess) {
 					wins++;
 					alert("you won!!");
@@ -36,13 +36,17 @@
 
 			 // you only have 10 chances to hit the right letter			
 				left= (left-1);
+				var bar = ((left*10)+"%")
+				console.log(bar)
 
 				// showing the results on the page
 					document.querySelector('#losses').innerHTML = losses;
 					document.querySelector('#win').innerHTML = wins;
 					document.querySelector('#guess').innerHTML = guess;
 					document.querySelector('#left').innerHTML = left;
-			}
+					document.querySelector('#report').style.width = bar;
+
+				}
 
 			else {
 	    alert('please choose a letter');

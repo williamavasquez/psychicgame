@@ -7,14 +7,20 @@
 	<!-- 	reset css -->
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
+<!-- 	bootstrap css -->
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<!-- style css for the page -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 
 <body>
-
+<div class="container">
 		<h1>The Psychic Game</h1>
+<!-- 		Shows the progress of game  -->
+		<div class="progress">
+  	<div class="progress-bar progress-bar-info" id="report" ></div>
+		</div>
 		<div>
 			<p>Wins: </p> <p id="win">0</p> 
 		</div>
@@ -26,7 +32,7 @@
 		</div>	<div>
 				<p>Your guesses:</p> <p id="guess">0</p> 
 		</div>
-
+</div>
 	<!-- 	game script (Can you guess what the computer guessed?) -->
 	<script src="assets/javascript/game.js"></script>
 
