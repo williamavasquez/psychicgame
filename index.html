@@ -18,23 +18,26 @@
 <div class="container">
 		<h1>The Psychic Game</h1>
 <!-- 		Shows the progress of game  -->
-		<div class="progress">
-  	<div class="progress-bar progress-bar-info" id="report" ></div>
+		<h2>Guesses Remaining:</h2>
+
+		<h3 id="left">0</h3>
+		<div class="progress progress-striped">
+  		<div class="progress-bar progress-bar-info" id="report" >
+  		</div>
 		</div>
+<!-- 		end of progress bar -->
+		<h3> Losses: <p id="losses">0</p></h3>
+		
 		<div>
-			<p>Wins: </p> <p id="win">0</p> 
+			<h3>Wins: <p id="win">0</p> </h3> 
 		</div>
+
 		<div>
-				<p>Losses: </p> <p id="losses">0</p> 
-		</div>
-		<div>
-				<p>Guess Left:</p> <p id="left">0</p> 
-		</div>	<div>
-				<p>Your guesses:</p> <p id="guess">0</p> 
+				<h3>Your guesses: <p id="guess">0</p> </h3> 
 		</div>
 </div>
+
 	<!-- 	game script (Can you guess what the computer guessed?) -->
 	<script src="assets/javascript/game.js"></script>
-
 </body>
 </html>

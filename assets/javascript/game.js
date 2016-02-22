@@ -37,15 +37,15 @@
 			 // you only have 10 chances to hit the right letter			
 				left= (left-1);
 				var bar = ((left*10)+"%")
-				console.log(bar)
 
 				// showing the results on the page
 					document.querySelector('#losses').innerHTML = losses;
 					document.querySelector('#win').innerHTML = wins;
 					document.querySelector('#guess').innerHTML = guess;
 					document.querySelector('#left').innerHTML = left;
-					document.querySelector('#report').style.width = bar;
 
+					// Moves the progress bar according to how many guess you have left
+					document.querySelector('#report').style.width = bar;
 				}
 
 			else {
